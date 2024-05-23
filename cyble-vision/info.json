@@ -1,0 +1,257 @@
+{
+  "name": "cyble-vision",
+  "label": "Cyble Vision",
+  "version": "1.0.0",
+  "description": "Cyble Threat Intel is an integration which will help users to fetch Cyble's TAXII Feed service into Environment.",
+  "publisher": "Fortinet",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "category": "Threat Intelligence",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "tags": [
+    "ThreatIntel"
+  ],
+  "ingestion_supported": true,
+  "ingestion_modes": [
+    "scheduled"
+  ],
+  "ingestion_preferences": {
+    "modules": [
+      "threat_intel_feeds",
+      "indicators"
+    ]
+  },
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "value": "",
+        "description": "The URL of the Cyble Vision server to which you will connect and perform the automated operations.",
+        "tooltip": "Specify the URL of the Cyble Vision server to which you will connect and perform automated operations.",
+        "name": "server_url"
+      },
+      {
+        "title": "Token",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "password",
+        "description": "The token used to access the Cyble Vision APIs and perform the automated operations.",
+        "tooltip": "Specify the token used to access the Cyble Vision server to which you will connect and perform automated operations.",
+        "name": "token"
+      },
+      {
+        "title": "Verify SSL",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "type": "checkbox",
+        "name": "verify_ssl",
+        "description": "Specifies whether the SSL certificate for the server is to be verified or not. \nBy default, this option is set as True.",
+        "value": true
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "fetch_indicators",
+      "title": "Fetch Indicators",
+      "description": "Retrieves indicators based on the start time, end time and other parameters that you have specified.",
+      "category": "investigation",
+      "annotation": "fetch_indicators",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "Start Time",
+          "name": "begin",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "datetime",
+          "tooltip": "(Optional) Specify the start date and time from when to retrieve the indicators from Cyble Vision.",
+          "description": "Specify the start date and time from when to retrieve the indicators from Cyble Vision."
+        },
+        {
+          "title": "End Time",
+          "name": "end",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "datetime",
+          "tooltip": "(Optional) Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision.",
+          "description": "Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision."
+        },
+        {
+          "title": "Offset",
+          "name": "from",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "value": 0,
+          "tooltip": "The maximum number of results to return. Default value is 50.",
+          "description": "(Optional) Specify the maximum number of records that this operation should return. Default value is 50."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "value": 50,
+          "tooltip": "The maximum number of results to return. Default value is 50.",
+          "description": "(Optional) Specify the maximum number of records that this operation should return. Default value is 50."
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the type for which the indicators to retrieve. e.g. CIDR, CVE, domain, email, FileHash-IMPHASH, FileHash-MD5, FileHash-PEHASH, FileHash-SHA1, FileHash-SHA256, FilePath, hostname, IPv4, IPv6, Mutex, NIDS, URI, URL, YARA, osquery, Ja3, Bitcoinaddress, Sslcertfingerprint.",
+          "description": "(Optional) Specify the type for which the indicators to retrieve from Cyble Vision. e.g. CIDR, CVE, domain, email, FileHash-IMPHASH, FileHash-MD5, FileHash-PEHASH, FileHash-SHA1, FileHash-SHA256, FilePath, hostname, IPv4, IPv6, Mutex, NIDS, URI, URL, YARA, osquery, Ja3, Bitcoinaddress, Sslcertfingerprint."
+        }
+      ]
+    },
+    {
+      "operation": "fetch_alerts",
+      "title": "Fetch Alerts",
+      "description": "Retrieves alerts based on the start time, end time, limit, offset other parameters that you have specified.",
+      "category": "investigation",
+      "annotation": "fetch_alerts",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "Start Time",
+          "name": "begin",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "datetime",
+          "tooltip": "(Optional) Specify the start date and time from when to retrieve the indicators from Cyble Vision.",
+          "description": "Specify the start date and time from when to retrieve the indicators from Cyble Vision."
+        },
+        {
+          "title": "End Time",
+          "name": "end",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "datetime",
+          "tooltip": "(Optional) Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision.",
+          "description": "Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision."
+        },
+        {
+          "title": "Offset",
+          "name": "from",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "value": 0,
+          "tooltip": "The maximum number of results to return. Default value is 50.",
+          "description": "(Optional) Specify the maximum number of records that this operation should return. Default value is 50."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "value": 50,
+          "tooltip": "The maximum number of results to return. Default value is 50.",
+          "description": "(Optional) Specify the maximum number of records that this operation should return. Default value is 50."
+        },
+        {
+          "title": "Sort by Order",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "select",
+          "options": [
+            "Ascending",
+            "Descending"
+          ],
+          "name": "order",
+          "value": "Ascending",
+          "tooltip": "The order by which you want to sort the alerts.",
+          "description": "Specify the sorting order of the result. You choose from following options: Ascending or Descending."
+        },
+        {
+          "title": "Priority",
+          "name": "priority",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the priority for which the alerts to retrieve. e.g. high,medium,low,informational.",
+          "description": "(Optional) Specify the type for which the alerts to retrieve from Cyble Vision. e.g. high,medium,low,informational."
+        }
+      ]
+    },
+    {
+      "operation": "fetch_event_detail",
+      "title": "Fetch Event Detail",
+      "description": "Retrieves event details based on the event type, event ID, limit, offset parameters that you have specified.",
+      "category": "investigation",
+      "annotation": "fetch_event_detail",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "Event Type",
+          "name": "event_type",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the event type whose details to retrieve from Cyble Vision.",
+          "description": "Specify the event type whose details to retrieve from Cyble Vision."
+        },
+        {
+          "title": "Event ID",
+          "name": "event_id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the event ID whose details to retrieve from Cyble Vision.",
+          "description": "Specify the event ID whose details to retrieve from Cyble Vision."
+        },
+        {
+          "title": "Offset",
+          "name": "from",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "value": 0,
+          "tooltip": "The maximum number of results to return. Default value is 50.",
+          "description": "(Optional) Specify the maximum number of records that this operation should return. Default value is 50."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "value": 50,
+          "tooltip": "The maximum number of results to return. Default value is 50.",
+          "description": "(Optional) Specify the maximum number of records that this operation should return. Default value is 50."
+        }
+      ]
+    }
+  ]
+}

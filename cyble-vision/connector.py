@@ -1,7 +1,9 @@
-""" Copyright start
-    MIT License
-    Copyright (c) 2023 Fortinet Inc
-    Copyright end """
+"""
+Copyright start
+MIT License
+Copyright (c) 2024 Fortinet Inc
+Copyright end
+"""
 
 from .operations import operations, check_health_ext
 from connectors.core.connector import Connector, get_logger, ConnectorError

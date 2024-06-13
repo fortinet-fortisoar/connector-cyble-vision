@@ -31,7 +31,6 @@
         "editable": true,
         "visible": true,
         "type": "text",
-        "value": "",
         "description": "The URL of the Cyble Vision server to which you will connect and perform the automated operations.",
         "tooltip": "Specify the URL of the Cyble Vision server to which you will connect and perform automated operations.",
         "name": "server_url"

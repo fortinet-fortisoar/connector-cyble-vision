@@ -36,9 +36,14 @@ For the procedure to configure a connector, click [here](https://docs.fortinet.c
 
 ## Actions supported by the connector
 The following automated operations can be included in playbooks and you can also use the annotations to access operations:
-<table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Fetch Indicators</td><td>Retrieves indicators based on the start time, end time and other parameters that you have specified.</td><td>fetch_indicators <br/>Investigation</td></tr>
-<tr><td>Fetch Alerts</td><td>Retrieves alerts based on the start time, end time, limit, offset other parameters that you have specified.</td><td>fetch_alerts <br/>Investigation</td></tr>
-<tr><td>Fetch Event Detail</td><td>Retrieves event details based on the event type, event ID, limit, offset parameters that you have specified.</td><td>fetch_event_detail <br/>Investigation</td></tr>
+<table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Fetch Indicators</td><td>Retrieves indicators and its reputations based IOC value, the start time, end time and other parameters that you have specified.</td><td>fetch_indicators <br/>Investigation</td></tr>
+<tr><td>Fetch Alerts</td><td>Retrieves alerts based on company ID,  the start time, end time, limit, offset other parameters that you have specified.</td><td>fetch_alerts <br/>Investigation</td></tr>
+<tr><td>List Advisories</td><td>Fetch the list of advisories based on the event type, event ID, limit, offset parameters that you have specified.</td><td>list_advisories <br/>Investigation</td></tr>
+<tr><td>Get advisory details</td><td>Fetch  advisory details using based on the advisory ID.</td><td>get_advisory_details<br/>Investigation</td></tr>
+<tr><td>Fetch Companies</td><td>Fetch Companies info including cpmaony ID.</td><td>fetch_companies<br/>Investigation</td></tr>
+<tr><td>Fetch IP Details</td><td>Retrieve detailed information about an IP address, including domain information, geolocation, SSL details, risk assessment, and more</td><td>fetch_ip_details<br/>Investigation</td></tr>
+<tr><td>Add Comment to Alert</td><td>Add Comment to Alert based on the alert ID</td><td>add_comment_to_alert<br/>Investigation</td></tr>
+<tr><td>Fetch CVE Details"</td><td>Retrieve Common Vulnerability and Exposure (CVE) details based on CVE ID</td><td>fetch_cve_details<br/>Investigation</td></tr>
 </tbody></table>
 
 ### operation: Fetch Indicators

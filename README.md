@@ -52,48 +52,142 @@ The following automated operations can be included in playbooks and you can also
 <thead>
 <tr><th>Parameter</th><th>Description</th></tr></thead>
 <tbody>
-<tr><td>Start Time</td><td>(Optional) Specify the start date and time from when to retrieve the indicators from Cyble Vision.</td></tr>
+<tr><td>IOC value</td><td>(Optional) A string representing the IoC to query for from Cyble Vision.</td></tr>
+<tr><td>Type</td><td>(Optional) Specify the type for which the indicators to retrieve from Cyble Vision. The IOC could be Domain, FileHash-MD5, FileHash-SHA1, FileHash-SHA256, IPv4, IPv6, URL, Email.</td></tr>
+<tr><td>Limit</td><td>(Optional) The maximum number of results to return. Default value is 10.</td></tr>
+<tr><td>Order</td><td>(Optional) string indicating the order of the results. It can be asc for ascending or desc for descending. Optional, defaults to asc.</td></tr>
+<tr><td>Sort By</td><td>(Optional) A string indicating the field to sort based on the columns confident_rating, risk_rating, last_seen, and first_seen.</td></tr>
+<tr><td>Start Time</td><td>(Optional) Specify the start date and time till when to retrieve the list of executed reports from Cyble Vision.</td></tr>
 <tr><td>End Time</td><td>(Optional) Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision.</td></tr>
-<tr><td>Offset</td><td>(Optional) Specify the maximum number of records that this operation should return. Default value is 50.</td></tr>
-<tr><td>Limit</td><td>(Optional) Specify the maximum number of records that this operation should return. Default value is 50.</td></tr>
-<tr><td>Type</td><td>(Optional) Specify the type for which the indicators to retrieve from Cyble Vision. e.g. CIDR, CVE, domain, email, FileHash-IMPHASH, FileHash-MD5, FileHash-PEHASH, FileHash-SHA1, FileHash-SHA256, FilePath, hostname, IPv4, IPv6, Mutex, NIDS, URI, URL, YARA, osquery, Ja3, Bitcoinaddress, Sslcertfingerprint.</td></tr>
+</tbody></table>
+
+### operation: Fetch Alerts
+#### Input parameters
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Company ID</td><td>(Required) Company UUID registered on Cyble Vision used to fetch alert from.</td></tr>
+<tr><td>Sort by</td><td>(Optional) The order by which you want to sort the alerts, It cloud be asc, desc .</td></tr>
+<tr><td>Start Time</td><td>(Optional) Specify the start date and time from when to retrieve the alerts from Cyble Vision.</td></tr>
+<tr><td>End Time</td><td>(Optional) Specify the end date and time till when to retrieve the list of alerts from Cyble Vision.</td></tr>
+<tr><td>Severity</td><td>(Optional) Specify the Severity to retrieve the list of alerts from Cyble Vision.</td></tr>
+<tr><td>Status</td><td>(Optional) Specify the Status to retrieve the list of alerts from Cyble Vision. it could be multi-selection of VIEWED, UNREVIEWED, CONFIRMED_INCIDENT,  UNDER_REVIEW, INFORMATIONAL.</td></tr>
+<tr><td>Service</td><td>(Optional) Specify the service to retrieve the list of alerts from Cyble Vision.</td></tr>
+<tr><td>Limit</td><td>(Optional) The maximum number of results to return. Default value is 50.</td></tr>
 </tbody></table>
 
 #### Output
 
  The output contains a non-dictionary value.
-### operation: Fetch Alerts
+
+
+### operation: List Advisories
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Start Time</td><td>Specify the start date and time from when to retrieve the indicators from Cyble Vision.
-</td></tr><tr><td>End Time</td><td>Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision.
-</td></tr><tr><td>Offset</td><td>Specify the maximum number of records that this operation should return. Default value is 50.
-</td></tr><tr><td>Limit</td><td>Specify the maximum number of records that this operation should return. Default value is 50.
-</td></tr><tr><td>Sort by Order</td><td>Specify the sorting order of the result. You choose from following options: Ascending or Descending.
-</td></tr><tr><td>Priority</td><td>Specify the type for which the alerts to retrieve from Cyble Vision. e.g. high,medium,low,informational.
-</td></tr></tbody></table>
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>From</td><td>(Optional) Specify the start date and time from when to retrieve the advisories from Cyble Vision.</td></tr>
+<tr><td>To</td><td>(Optional) Specify the end date and time from when to retrieve the advisories from Cyble Vision.</td></tr>
+<tr><td>Sort By</td><td>(Optional) The field to sort the advisories by. Possible values: publish_date.</td></tr>
+<tr><td>Order</td><td>(Optional) The order in which advisories should be sorted. Possible values: asc (ascending), desc (descending). Default: desc.</td></tr>
+<tr><td>Limit</td><td>(Optional) The maximum number of results to return. Default value is 10.</td></tr>
+<tr><td>Page</td><td>(Optional) The page number of the results to retrieve. Default: 1.</td></tr>
+<tr><td>Custom Tags</td><td>(Optional) Custom tags to filter advisories. Commas can separate multiple values.</td></tr>
+<tr><td>Countries</td><td>(Optional) Countries to filter advisories. Commas can separate multiple values.</td></tr>
+<tr><td>Vulnerabilities</td><td>(Optional) Vulnerabilities to filter advisories. Commas can separate multiple values.</td></tr>
+</tbody></table>
+
 #### Output
 
  The output contains a non-dictionary value.
-### operation: Fetch Event Detail
+
+
+### operation: Get advisory details
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Event Type</td><td>Specify the event type whose details to retrieve from Cyble Vision.
-</td></tr><tr><td>Event ID</td><td>Specify the event ID whose details to retrieve from Cyble Vision.
-</td></tr><tr><td>Offset</td><td>Specify the maximum number of records that this operation should return. Default value is 50.
-</td></tr><tr><td>Limit</td><td>Specify the maximum number of records that this operation should return. Default value is 50.
-</td></tr></tbody></table>
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Advisory ID</td><td>(Required) Advisory ID to get all related details from Cyble Vision.</td></tr>
+</tbody></table>
 
 #### Output
 
  The output contains a non-dictionary value.
+
+
+### operation: Fetch Companies
+#### Input parameters
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td> No inputs needed.</td></tr>
+</tbody></table>
+
+#### Output
+
+ The output contains a non-dictionary value.
+
+
+
+### operation: Fetch IP Details
+#### Input parameters
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>company Id</td><td>(Required) the Company UUID - Cyble Vision registered companies. you can use Fetch Companies action to get the registred companies IDs. </td></tr>
+<tr><td>Address IP</td><td>(Required) the IP address representing the IoC to query for from Cyble Visions in the selected company.</td></tr>
+</tbody></table>
+
+#### Output
+
+ The output contains a non-dictionary value.
+
+
+### operation: Add Comment to Alert
+#### Input parameters
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Alert ID</td><td>(Required) The unique identifier of the alert for which you want to add comments. </td></tr>
+<tr><td>Comment</td><td>(Optional) to  add a new comment. Use this parameter to specify the comment content you want to add to the alert.</td></tr>
+</tbody></table>
+
+#### Output
+
+ The output contains a non-dictionary value.
+
+### operation: Fetch CVE Details
+#### Input parameters
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>CVE ID</td><td>(Required) CVE identifier for the specific vulnerability you want to retrieve details for.. </td></tr>
+</tbody></table>
+
+#### Output
+
+ The output contains a non-dictionary value.
+
+
 ## Included playbooks
-The `Sample - cyble-vision - 1.0.0` playbook collection comes bundled with the Cyble Vision connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the Cyble Vision connector.
+The `Sample - cyble-vision - 2.0.0` playbook collection comes bundled with the Cyble Vision connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the Cyble Vision connector.
 
+- Get IOC Reputation
+- Fetch Indicators
+- Get advisory Details
 - Cyble Vision  > Fetch and Create
 - Cyble Vision > Ingest
 - Get Indicators
 
 **Note**: If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection since the sample playbook collection gets deleted during connector upgrade and delete.
 ## Data Ingestion Support
-Use the Data Ingestion Wizard to easily ingest data into FortiSOAR&trade; by pulling events/alerts/incidents, based on the requirement.
+Use the Data Ingestion Wizard to easily ingest data into FortiSOAR&trade; by pulling IOC/alerts/incidents, based on the requirement.
 
 **TODO:** provide the list of steps to configure the ingestion with the screen shots and limitations if any in this section.

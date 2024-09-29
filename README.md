@@ -119,7 +119,7 @@ The following automated operations can be included in playbooks and you can also
 
 
 ### operation: Fetch Companies
-#### Input parameters
+
 
 <p> No inputs needed.</p>
 

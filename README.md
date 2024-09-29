@@ -120,12 +120,9 @@ The following automated operations can be included in playbooks and you can also
 
 ### operation: Fetch Companies
 #### Input parameters
-<table border=1>
-<thead>
-<tr><th>Parameter</th><th>Description</th></tr></thead>
-<tbody>
-<tr><td> No inputs needed.</td></tr>
-</tbody></table>
+
+<p> No inputs needed.</p>
+
 
 #### Output
 

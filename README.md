@@ -61,6 +61,40 @@ The following automated operations can be included in playbooks and you can also
 <tr><td>End Time</td><td>(Optional) Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision.</td></tr>
 </tbody></table>
 
+
+#### Output
+
+{
+  "data": {
+    "data": {
+      "iocs": [
+        {
+          "ioc": "",
+          "sources": [],
+          "ioc_type": "IPv4",
+          "last_seen": 1727586486,
+          "first_seen": 1601164800,
+          "risk_score": 70,
+          "behaviour_tags": [],
+          "is_whitelisted": false,
+          "target_regions": [],
+          "related_malware": [],
+          "target_countries": [ ],
+          "confidence_rating": "",
+          "target_industries": [],
+          "related_threat_actors": null
+        }
+      ],
+      "pagination": {
+        "page": 1,
+        "limit": 1,
+        "total_count": 1
+      }
+    },
+    "success": true
+  }
+}  
+
 ### operation: Fetch Alerts
 #### Input parameters
 <table border=1>
@@ -79,7 +113,58 @@ The following automated operations can be included in playbooks and you can also
 
 #### Output
 
- The output contains a non-dictionary value.
+{
+  "data": {
+    "data": [
+      {
+        "id": "",
+        "hash": "",
+        "tags": {
+          "data": []
+        },
+        "status": "",
+        "data_id": "",
+        "service": "",
+        "archived": null,
+        "metadata": {
+          "entity": {
+            "wallet": null,
+            "keyword": {
+              "id": 71581,
+              "tag_name": "",
+              "bucket_id": 1289,
+              "company_id": 252,
+              "created_at": "",
+              "updated_at": "",
+              "display_name": ""
+            },
+            "website": null,
+            "software": null,
+            "entity_id": 71581,
+            "entity_type": 0,
+            "watermarking_website": null
+          }
+        },
+        "severity": "",
+        "created_at": "",
+        "deleted_at": null,
+        "risk_score": null,
+        "updated_at": "",
+        "assignee_id": null,
+        "description": null,
+        "archive_date": null,
+        "user_severity": "",
+        "alert_group_id": "2",
+        "assignment_date": null
+      }
+    ],
+    "cached": false,
+    "success": true,
+    "ids_error": [],
+    "additional_data": null
+  }
+}
+
 
 
 ### operation: List Advisories
@@ -101,7 +186,39 @@ The following automated operations can be included in playbooks and you can also
 
 #### Output
 
- The output contains a non-dictionary value.
+{
+  "data": {
+    "data": {
+      "reports": [
+        {
+          "id": 0,
+          "tags": {
+            "regions": [],
+            "countries": [
+              "Spain",
+              "Portugal"
+            ],
+            "customTags": [],
+            "industries": [],
+            "vulnerabilities": []
+          },
+          "title": "",
+          "status": "",
+          "classified": 0,
+          "risk_score": "",
+          "tlp_rating": "",
+          "publish_date": ""
+        }
+      ],
+      "pagination": {
+        "page": "2",
+        "total": 338,
+        "items_per_page": "20"
+      }
+    },
+    "success": true
+  }
+}
 
 
 ### operation: Get advisory details
@@ -126,7 +243,26 @@ The following automated operations can be included in playbooks and you can also
 
 #### Output
 
- The output contains a non-dictionary value.
+{
+  "data": {
+    "data": [
+      {
+        "uuid": "",
+        "displayName": ""
+      },
+      {
+        "uuid": "",
+        "displayName": ""
+      },
+      {
+        "uuid": "",
+        "displayName": ""
+      }
+    ],
+    "meta": {},
+    "success": true
+  }
+}
 
 
 
@@ -142,7 +278,7 @@ The following automated operations can be included in playbooks and you can also
 
 #### Output
 
- The output contains a non-dictionary value.
+
 
 
 ### operation: Add Comment to Alert
@@ -157,7 +293,21 @@ The following automated operations can be included in playbooks and you can also
 
 #### Output
 
- The output contains a non-dictionary value.
+{
+  "data": {
+    "data": {
+      "uuid": "",
+      "alertId": "",
+      "content": "",
+      "createdAt": "",
+      "createdBy": "",
+      "updatedAt": null,
+      "parentCommentId": null
+    },
+    "meta": {},
+    "success": true
+  }
+}
 
 ### operation: Fetch CVE Details
 #### Input parameters
@@ -170,18 +320,131 @@ The following automated operations can be included in playbooks and you can also
 
 #### Output
 
- The output contains a non-dictionary value.
+{
+  "data": {
+    "data": {
+      "cve": {
+        "data_type": "CVE",
+        "references": {
+          "reference_data": [
+            {
+              "url": "",
+              "name": "N/A",
+              "tags": [],
+              "refsource": ""
+            }
+          ]
+        },
+        "data_format": "",
+        "description": {
+          "description_data": [
+            {
+              "lang": "",
+              "value": ""
+            }
+          ]
+        },
+        "problemtype": {
+          "problemtype_data": [
+            {
+              "description": [
+                {
+                  "lang": "en",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        "data_version": "",
+        "CVE_data_meta": {
+          "ID": "CVE-2020-2020",
+          "ASSIGNER": ""
+        }
+      },
+      "impact": {
+        "baseMetricV2": {
+          "cvssV2": {
+            "version": "",
+            "baseScore": 2.1,
+            "accessVector": "LOCAL",
+            "vectorString": "",
+            "authentication": "",
+            "integrityImpact": "",
+            "accessComplexity": "",
+            "availabilityImpact": "",
+            "confidentialityImpact": ""
+          },
+          "severity": "",
+          "acInsufInfo": false,
+          "impactScore": 2.9,
+          "obtainAllPrivilege": false,
+          "exploitabilityScore": 3.9,
+          "obtainUserPrivilege": false,
+          "obtainOtherPrivilege": false,
+          "userInteractionRequired": false
+        },
+        "baseMetricV3": {
+          "cvssV3": {
+            "scope": "",
+            "version": "",
+            "baseScore": 5.5,
+            "attackVector": "",
+            "baseSeverity": "",
+            "vectorString": "",
+            "integrityImpact": "",
+            "userInteraction": "",
+            "attackComplexity": "",
+            "availabilityImpact": "",
+            "privilegesRequired": "",
+            "confidentialityImpact": ""
+          },
+          "impactScore": 3.6,
+          "exploitabilityScore": 1.8
+        }
+      },
+      "publishedDate": "",
+      "configurations": {
+        "nodes": [
+          {
+            "children": [],
+            "operator": "OR",
+            "cpe_match": [
+              {
+                "cpe23Uri": "",
+                "cpe_name": [],
+                "vulnerable": true,
+                "versionEndExcluding": "",
+                "versionStartIncluding": ""
+              }
+            ]
+          }
+        ],
+        "CVE_data_version": ""
+      },
+      "lastModifiedDate": "",
+      "ImpactVersionDetails": null
+    },
+    "success": true
+  }
+}
 
 
 ## Included playbooks
 The `Sample - cyble-vision - 2.0.0` playbook collection comes bundled with the Cyble Vision connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the Cyble Vision connector.
 
 - Get IOC Reputation
-- Fetch Indicators
+- Fetch Alert
+- Add Comment to alert
 - Get advisory Details
+- Fetch IP details
+- List Of Advisories
+- Fetch Companies
+- Fetch CVE details
+- File Hash / Domain / IP / URL > Cyble Vision Threat Intelligence > Enrichment
 - Cyble Vision  > Fetch and Create
 - Cyble Vision > Ingest
-- Get Indicators
+
 
 **Note**: If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection since the sample playbook collection gets deleted during connector upgrade and delete.
 ## Data Ingestion Support

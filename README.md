@@ -94,7 +94,8 @@ The following automated operations can be included in playbooks and you can also
     "success": true
   }
 }  
-   </pre></code>
+  </pre></code>
+
 ### operation: Fetch Alerts
 #### Input parameters
 <table border=1>
@@ -112,7 +113,7 @@ The following automated operations can be included in playbooks and you can also
 </tbody></table>
 
 #### Output
-
+<pre><code>
 {
   "data": {
     "data": [
@@ -165,7 +166,7 @@ The following automated operations can be included in playbooks and you can also
   }
 }
 
-
+</pre></code>
 
 ### operation: List Advisories
 #### Input parameters
@@ -185,7 +186,7 @@ The following automated operations can be included in playbooks and you can also
 </tbody></table>
 
 #### Output
-
+<pre><code>
 {
   "data": {
     "data": {
@@ -219,7 +220,7 @@ The following automated operations can be included in playbooks and you can also
     "success": true
   }
 }
-
+</pre></code>
 
 ### operation: Get advisory details
 #### Input parameters
@@ -242,7 +243,7 @@ The following automated operations can be included in playbooks and you can also
 
 
 #### Output
-
+<pre><code>
 {
   "data": {
     "data": [
@@ -263,7 +264,7 @@ The following automated operations can be included in playbooks and you can also
     "success": true
   }
 }
-
+</pre></code>
 
 
 ### operation: Fetch IP Details
@@ -278,7 +279,7 @@ The following automated operations can be included in playbooks and you can also
 
 #### Output
 
-
+The output contains a non-dictionary value.
 
 
 ### operation: Add Comment to Alert
@@ -292,7 +293,7 @@ The following automated operations can be included in playbooks and you can also
 </tbody></table>
 
 #### Output
-
+<pre><code>
 {
   "data": {
     "data": {
@@ -308,7 +309,7 @@ The following automated operations can be included in playbooks and you can also
     "success": true
   }
 }
-
+</pre></code>
 ### operation: Fetch CVE Details
 #### Input parameters
 <table border=1>
@@ -319,7 +320,7 @@ The following automated operations can be included in playbooks and you can also
 </tbody></table>
 
 #### Output
-
+<pre><code>
 {
   "data": {
     "data": {
@@ -428,7 +429,7 @@ The following automated operations can be included in playbooks and you can also
     "success": true
   }
 }
-
+</pre></code>
 
 ## Included playbooks
 The `Sample - cyble-vision - 2.0.0` playbook collection comes bundled with the Cyble Vision connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the Cyble Vision connector.

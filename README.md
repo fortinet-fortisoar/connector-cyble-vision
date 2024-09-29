@@ -48,12 +48,16 @@ The following automated operations can be included in playbooks and you can also
 
 ### operation: Fetch Indicators
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Start Time</td><td>(Optional) Specify the start date and time from when to retrieve the indicators from Cyble Vision.
-</td></tr><tr><td>End Time</td><td>(Optional) Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision.
-</td></tr><tr><td>Offset</td><td>(Optional) Specify the maximum number of records that this operation should return. Default value is 50.
-</td></tr><tr><td>Limit</td><td>(Optional) Specify the maximum number of records that this operation should return. Default value is 50.
-</td></tr><tr><td>Type</td><td>(Optional) Specify the type for which the indicators to retrieve from Cyble Vision. e.g. CIDR, CVE, domain, email, FileHash-IMPHASH, FileHash-MD5, FileHash-PEHASH, FileHash-SHA1, FileHash-SHA256, FilePath, hostname, IPv4, IPv6, Mutex, NIDS, URI, URL, YARA, osquery, Ja3, Bitcoinaddress, Sslcertfingerprint.
-</td></tr></tbody></table>
+<table border=1>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Start Time</td><td>(Optional) Specify the start date and time from when to retrieve the indicators from Cyble Vision.</td></tr>
+<tr><td>End Time</td><td>(Optional) Specify the end date and time till when to retrieve the list of executed reports from Cyble Vision.</td></tr>
+<tr><td>Offset</td><td>(Optional) Specify the maximum number of records that this operation should return. Default value is 50.</td></tr>
+<tr><td>Limit</td><td>(Optional) Specify the maximum number of records that this operation should return. Default value is 50.</td></tr>
+<tr><td>Type</td><td>(Optional) Specify the type for which the indicators to retrieve from Cyble Vision. e.g. CIDR, CVE, domain, email, FileHash-IMPHASH, FileHash-MD5, FileHash-PEHASH, FileHash-SHA1, FileHash-SHA256, FilePath, hostname, IPv4, IPv6, Mutex, NIDS, URI, URL, YARA, osquery, Ja3, Bitcoinaddress, Sslcertfingerprint.</td></tr>
+</tbody></table>
 
 #### Output
 

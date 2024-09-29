@@ -63,7 +63,7 @@ The following automated operations can be included in playbooks and you can also
 
 
 #### Output
-
+   <pre><code>
 {
   "data": {
     "data": {
@@ -94,7 +94,7 @@ The following automated operations can be included in playbooks and you can also
     "success": true
   }
 }  
-
+   </pre></code>
 ### operation: Fetch Alerts
 #### Input parameters
 <table border=1>

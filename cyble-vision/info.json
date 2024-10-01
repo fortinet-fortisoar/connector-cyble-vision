@@ -2,6 +2,7 @@
 	"name": "cyble-vision",
 	"label": "Cyble Vision",
 	"version": "2.0.0",
+	"contributor":"ABelkhiri",
 	"description": "Integration that enables users to access and enrich Indicators of Compromise (IOCs) from Cyble's TAXII Feed service within their environment.",
 	"publisher": "Fortinet",
 	"cs_approved": false,

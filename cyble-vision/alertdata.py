@@ -1,8 +1,27 @@
+"""
+Copyright start
+MIT License
+Copyright (c) 2025 Fortinet Inc
+Copyright end
+"""
+
+
 import json
+
 
 class Alertdata:
     def __init__(self):
-        self.dict = {            "companyUuid": "65842219-1aea-4aa2-8bb2-ceee36b7a6e6",            "orderBy": [                {                    "created_at": "desc"                }            ],            "select": {                "alert_group_id": "true",                  "archive_date": "true",                "archived": "true",                "assignee_id": "true",                "assignment_date": "true",                "created_at": "true",                "data_id": "true",                "deleted_at": "true",                "description": "true",                "hash": "true",                "id": "true",                "metadata": "true",                "risk_score": "true",                "service": "true",                "severity": "true",                "status": "true",                "tags": "true",                "updated_at": "true",                "user_severity": "true"            },            "skip": 0,            "take": 1,            "where": {                "created_at": {                    "gte": "2024-09-04T00:00:00+00:00",                    "lte": "2024-09-25T00:00:00+00:00"                },                "service": {                    "in": [                        "darkweb_data_breaches"                    ]                },                "severity": {                    "in": [                        "HIGH",                        "MEDIUM",                        "LOW"                    ]                },                "status": {                    "in": [                        "VIEWED",                        "UNREVIEWED",                        "CONFIRMED_INCIDENT",                        "UNDER_REVIEW",                        "INFORMATIONAL"                    ]                }            }        }
+        self.dict = {"companyUuid": "65842219-1aea-4aa2-8bb2-ceee36b7a6e6", "orderBy": [{"created_at": "desc"}],
+                     "select": {"alert_group_id": "true", "archive_date": "true", "archived": "true",
+                                "assignee_id": "true", "assignment_date": "true", "created_at": "true",
+                                "data_id": "true", "deleted_at": "true", "description": "true", "hash": "true",
+                                "id": "true", "metadata": "true", "risk_score": "true", "service": "true",
+                                "severity": "true", "status": "true", "tags": "true", "updated_at": "true",
+                                "user_severity": "true"}, "skip": 0, "take": 1,
+                     "where": {"created_at": {"gte": "2024-09-04T00:00:00+00:00", "lte": "2024-09-25T00:00:00+00:00"},
+                               "service": {"in": ["darkweb_data_breaches"]},
+                               "severity": {"in": ["HIGH", "MEDIUM", "LOW"]}, "status": {
+                             "in": ["VIEWED", "UNREVIEWED", "CONFIRMED_INCIDENT", "UNDER_REVIEW", "INFORMATIONAL"]}}}
         self.dict2 = {
             "Data Breaches": "darkweb_data_breaches",
             "Ransomware Forum Mentions": "darkweb_ransomware",
@@ -63,11 +82,12 @@ class Alertdata:
         self.set_value_in_dict("where", "status", {"in": new_dict['status']})
         service = self.dict2[new_dict['service']]
         self.set_value_in_dict("where", "service", {"in": [service]})
-        self.set_value_in_dict("where", "severity", {"in": new_dict['severity']})  
+        self.set_value_in_dict("where", "severity", {"in": new_dict['severity']})
         self.set_value_in_dict("where", "created_at", {"gte": new_dict['begin'], "lte": new_dict['end']})
 
     def get_dictionary(self):
         return self.dict
+
     def prepare_post_data(self):
         # Convert the dictionary to a JSON string
         json_data = json.dumps(self.dict)
@@ -75,6 +95,3 @@ class Alertdata:
         json_data = json_data.replace('"true"', 'true')
         dict_obj = json.loads(json_data)
         return dict_obj
-
-    
-   

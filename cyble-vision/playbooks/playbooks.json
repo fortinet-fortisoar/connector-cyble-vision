@@ -6,42 +6,45 @@
       "name": "Sample - Cyble Vision - 2.0.0",
       "description": "Sample playbooks for \"Cyble Vision\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": "data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABwtJREFUeNrsmnlQU0ccx0kIASRyiBzhMNwgCDUoilA8ISgEoYJcUtSO1gMtg1qr9SJYjhHUAnbQ0litOvXicIZIxQMEpyoVKzQojMSAgKjMiKByyJF+MZqGU/xP6u7svNm377f73meP7++3mVAkEonCp5SoCp9YIsAEmAATYAJMgAkwASbABJgAE2ACTIAJMAEmwASYABNgAkyACTABJsAEeKSJNtSDrq6uzKwsoVBYUVnZ1tpqZGRkYmLi7+9vYW7+f5vhV69e7d2/33DChF/4fImCgsuMGT4LFxoZG1fX1Hh5e7tzOPkFBaOYWNI3icViW3t7Ly63/O5dyYDU1tb2c3q6vqHhD3FxktGZ+gDX1taaWphv37mzp6dnmDYPHz60sLKK5vFGIzBF9g8AFOZ7ednZ2sbweMLy8vb29uzsbGdnZ11d3Yk2NkwmU35diMXVzq4u/PR0rrf3aF3Svx07xtDQCAoJCQsPpykrqzIYAYGBP6akHDx0SF1Ly8nZubCoSH6o8i5e1NHT6+zslNX8euTIPA5nrKamkoqKLCft28eeMgU9QwL7DfYzQe7f1g7CuZ4iodDKxka+FTJdVdXFza20tBSWxiYmqOn3AdIEZVng7W1jZzcwd3d3D7T/T6VTUlMxq7dv3+7q7lZRVvbx4XZ1dZfeuWNtbX01P7+lpSUrO1tTQwO3dDod9h7u7nZ2djkCgZ+vL25jdu/eHRuLgoqKyhRHR1yl3RoaGCTt2ePp5bV5yxaOh4eamprsjQ37U3s6OphRkZk3bjwQi9Gt09SpFAoFj7CjysrKiouL10VGFubny7bfwAk7fuLExUuX0EpHR4cy8hkuLSvDrLp7ctA+MDh4UUAARhQ1zi4uIUuW/CMUnjl7duXXq8KXLdNjMgEpbfVTWtoXAQHSXY2JhT0kbdCdgz7xFIMiq3nCP1JiYn3/q1Uopx44gKe7oqPlm/x16xYqkVE2YrFQKCwsHNjzd1u34hFPrufhE/XdnhTj2vqqteHx4ydPnmCwP3d1tbW1dXV1RX1wSAiweyQ9AoHAk8NZunz58+fPUR+4ePEDkQiFGzdvQsCnTZu2csWKQYf1YFqauro6ljfGDrcddXX1CUmKGuoTYnkyG0VFRfkm47S0Rr4xKR8aeIhEIhMWC0jQXk+Ox9mMDDBv3LDB18cHS/F+VZW5uXleXl5zS0vO+fP29vbZ584tW7p0vLZ2lUjUu0BKS9HJ3DlzhnqNlqbmxqioXTzet5s35woEtTtiJJ2dOuEr6Pp6MhvsxqtXr75ddwoKmZlZKMx0cxsJRm/bwsJ+lbNmzhwSGC+gUKl0JToEmUZTYrPZxkZGkCsEIRUVFd+sX+8xb54agzFu3LjGxsaMzMwxY8bI9/K8uRlXJSWlYb4JnZw6ffrylSvnc3ONy+8qGTD1I1bLG0A1keVrENvFx8WNBHhgW6TO9vYhgS0tLJqamqAZr1+/trCwgADgs1DT9KwpYu3aDVFRMhHCiLi6uMAM5aeNjVaWlhCMsQwGbqGKw3wTg8FISU728PT8ftu2gsS9NDU1qrKyvMGS0NDQkBCZsiCe27tvH7yGuKrqvcD+ixYF+Pt/wJJmsVjYlqfPnJk9eza+fk9iIkRYW1vbyWnqmtWr+7XBZlNVVUUBU81imaAwefJkXIuuXRv+ZVhjwUFBv588ebzi7vp16/o9NTczg4zLbiEWAK6rqxNXV78XA+HDCIHfitZnDg7IKBQUFMBDQI2g9Trjx38ZFjZM44yMjPCwJSg4stlUKrWoqOi9YbaxsXHvFnijef39Rd9bqODb+p6eQQ2GaSufoJT8w4er3ohrn9MSJApeh0ajNTc33yopgQJhGTPerNVB06XLlysrK7lcbu+OsLRcHxGRnJrKmT8fA4c1r/xuuXogubsPPwpSYz6f/+LFC6newg8jzEABftvU1FRqkJiUlJOTI9/QzMxMKhx/XLgwsNuoyMiSkhJlOh2aCsu35zyZg0L8jA0Gn+bo5LQ4KGgBl7th06ahvFl1dTWOENBqWQ2Ok/uTk91mzdLV14dPluW4+Hj5hjujo9XU1WP7nj3gIyZOmiTfSpod2OyTp07BgBcTo9O3W2nGR/55/bqOvp7UY/fLdfX1iJfg/DFSN4uLBzk81NTUsMzMYIreQ8PCEFoNSlv/6BEiwe07dnwk54EXL1/WDZYwB3gKR/P06dPBT0u9g/3gAaJQ6Qj5+PoiCJF/2t7RceToUaah4cgjm4/3tCSfoNJxCQkYG0TOEWvWYCM1NDQgfkTgyWY7JsTHOU+fPkrP/5Sh/iAOTwsvde/ePelR0cDAAC7Xz88PfnhU/8RDIf+IJ8AEmAATYAJMgAkwASbABJgAE2ACTIAJMAEmwASYABNgAkyACTABJsAEmAC/Sf8KMAAXMRfJB29/IQAAAABJRU5ErkJggg==",
+      "image": null,
       "uuid": "1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
-      "id": 213,
+      "id": 92,
       "deletedAt": null,
       "importedBy": [],
-      "recordTags": [],
+      "recordTags": [
+        "Cyble",
+        "cyble-vision"
+      ],
       "workflows": [
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Get advisory Details",
+          "name": "Get Advisory Details",
           "aliasName": null,
           "tag": null,
-          "description": "Get advisory Details from Cyble Vision CTI",
-          "isActive": true,
+          "description": "Retrieves specific advisory details from Cyble Vision based on the advisory ID you have specified.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727527101,
+          "lastModifyDate": 1738294589,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/b65078b7-2c21-4758-8a2e-f2048c1ab214",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Get IOC Reputation",
+              "name": "Get Advisory Details",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
                 "config": "b367839a-02a3-4ed1-9646-bd23ccc49bcf",
                 "params": {
-                  "advisoryID": "advisory ID"
+                  "advisoryID": "1"
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "get_advisory_details",
                 "operationTitle": "Get advisory details",
@@ -49,8 +52,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
               "uuid": "5cdf61ab-8a17-4731-9bb6-663355816845"
@@ -61,8 +64,9 @@
               "description": null,
               "arguments": {
                 "route": "256625b3-b812-4d65-a623-45e1d51cc7df",
+                "title": "Cyble Vision: Get Advisory Details",
                 "resources": [
-                  "indicators"
+                  "alerts"
                 ],
                 "__triggerLimit": true,
                 "inputVariables": [],
@@ -82,7 +86,7 @@
                   }
                 },
                 "executeButtonText": "Execute",
-                "noRecordExecution": false,
+                "noRecordExecution": true,
                 "showToasterMessage": {
                   "visible": false,
                   "messageVisible": true
@@ -91,8 +95,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "b65078b7-2c21-4758-8a2e-f2048c1ab214"
@@ -113,12 +117,15 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "017f2124-f0af-42cb-bd82-a924aceea450",
-          "id": 3208,
+          "id": 2114,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         },
         {
           "@type": "Workflow",
@@ -127,7 +134,7 @@
           "aliasName": null,
           "tag": null,
           "description": "Fetch Collections from Cyble Vision",
-          "isActive": true,
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
@@ -226,7 +233,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "23c50c3f-7480-4a6b-8249-05bfcae5a795",
-          "id": 3195,
+          "id": 2115,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -254,7 +261,7 @@
             "style_colors"
           ],
           "synchronous": false,
-          "lastModifyDate": 1727525449,
+          "lastModifyDate": 1738294679,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/da5cbe97-ad47-4f00-8ebe-5dff13fca130",
@@ -312,10 +319,10 @@
                   "ioc": "{{vars.indicator_value}}",
                   "begin": "",
                   "limit": 10,
-                  "order": "asc",
-                  "sortBy": "first_seen"
+                  "order": "Ascending",
+                  "sortBy": "First Seen"
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "fetch_indicators",
                 "mock_result": "{\n    \"data\": {\n      \"iocs\": [\n        {\n          \"ioc\": \"\",\n          \"sources\": [],\n          \"ioc_type\": \"IPv4\",\n          \"last_seen\": 1727499602,\n          \"first_seen\": 1601164800,\n          \"risk_score\": 80,\n          \"behaviour_tags\": [],\n          \"is_whitelisted\": false,\n          \"target_regions\": [],\n          \"related_malware\": [],\n          \"target_countries\": [],\n          \"confidence_rating\": \"Medium\",\n          \"target_industries\": [],\n          \"related_threat_actors\": []\n        }\n      ],\n      \"pagination\": {\n        \"page\": 1,\n        \"limit\": 1,\n        \"total_count\": 1\n      }\n    },\n    \"success\": true\n  }",
@@ -483,7 +490,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "28ba71f1-048e-40f3-9e74-3113adb5b522",
-          "id": 3202,
+          "id": 2116,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -499,24 +506,24 @@
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Get IOC Reputation",
+          "name": "Fetch Indicators",
           "aliasName": null,
           "tag": null,
-          "description": "Get IP, Hash, URL, and Domain reputation from Cyble Vision CTI",
-          "isActive": true,
+          "description": "Retrieves a list of indicators from Cyble Vision based on the input parameters you have specified.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727384216,
+          "lastModifyDate": 1738294503,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/86199389-816e-4308-a210-67cc98cc5705",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Get IOC Reputation",
+              "name": "Fetch Indicators",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
@@ -526,10 +533,10 @@
                   "ioc": "{{vars.input.records[0].value}}",
                   "begin": "",
                   "limit": 10,
-                  "order": "asc",
-                  "sortBy": "first_seen"
+                  "order": "Ascending",
+                  "sortBy": "First Seen"
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "fetch_indicators",
                 "operationTitle": "Fetch Indicators",
@@ -537,8 +544,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
               "uuid": "c41ce758-1b49-41ff-9d3c-6c41ff13b4b3"
@@ -549,6 +556,7 @@
               "description": null,
               "arguments": {
                 "route": "a81a0b06-48e4-4997-a779-2bedcaeaca36",
+                "title": "Cyble Vision: Fetch Indicators",
                 "resources": [
                   "indicators"
                 ],
@@ -579,8 +587,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "86199389-816e-4308-a210-67cc98cc5705"
@@ -601,42 +609,45 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "523b19f1-b199-4b81-b984-34d4c5a76963",
-          "id": 3198,
+          "id": 2117,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         },
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Fetch CVE details",
+          "name": "Fetch CVE Details",
           "aliasName": null,
           "tag": null,
-          "description": "Get IP, Hash, URL, and Domain reputation from Cyble Vision CTI",
-          "isActive": true,
+          "description": "Retrieve the specific common vulnerability and exposure (CVE) details from Cyble Vision.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727527224,
+          "lastModifyDate": 1738294416,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/aeec0eee-4c9a-4c07-bf6c-3fb01fb6c7de",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Get IOC Reputation",
+              "name": "Fetch CVE Details",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
                 "config": "b367839a-02a3-4ed1-9646-bd23ccc49bcf",
                 "params": {
-                  "cve": "CVE ID"
+                  "cve": "1"
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "fetch_cve_details",
                 "operationTitle": "Fetch CVE Details",
@@ -644,8 +655,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
               "uuid": "56ff6732-57b8-4f3b-a050-f374a93f8113"
@@ -656,8 +667,9 @@
               "description": null,
               "arguments": {
                 "route": "dcf19db0-3e80-49df-9702-84fcd26d04fd",
+                "title": "Cyble Vision: Fetch CVE Details",
                 "resources": [
-                  "indicators"
+                  "alerts"
                 ],
                 "__triggerLimit": true,
                 "inputVariables": [],
@@ -677,7 +689,7 @@
                   }
                 },
                 "executeButtonText": "Execute",
-                "noRecordExecution": false,
+                "noRecordExecution": true,
                 "showToasterMessage": {
                   "visible": false,
                   "messageVisible": true
@@ -686,8 +698,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "aeec0eee-4c9a-4c07-bf6c-3fb01fb6c7de"
@@ -708,59 +720,64 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "6d4e030a-9d04-4002-8340-17bf1526bdf2",
-          "id": 3210,
+          "id": 2118,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         },
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Fetch Alert",
+          "name": "Fetch Alerts",
           "aliasName": null,
           "tag": null,
-          "description": "Fetch Alerts from Cyble Vision CTI",
-          "isActive": true,
+          "description": "Retrieves a list of alerts from Cyble Vision based on the company ID, and other parameters you have specified.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727526361,
+          "lastModifyDate": 1738294334,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/64b258b4-f6c3-49e5-8d9d-71837525b7aa",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Fetch Alert",
+              "name": "Fetch Alerts",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
-                "config": "b367839a-02a3-4ed1-9646-bd23ccc49bcf",
+                "config": "bfd56888-bcd0-4565-b4ee-d8d72226a4a3",
                 "params": {
                   "end": "",
-                  "ioc": "{{vars.input.records[0].value}}",
                   "begin": "",
-                  "limit": 10,
-                  "order": "asc",
-                  "sortBy": "first_seen"
+                  "limit": 50,
+                  "sortBy": "Descending",
+                  "status": "",
+                  "service": "Data Breaches",
+                  "severity": "",
+                  "companyID": "1"
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
-                "operation": "fetch_indicators",
-                "operationTitle": "Fetch Indicators",
+                "operation": "fetch_alerts",
+                "operationTitle": "Fetch Alerts",
                 "pickFromTenant": false,
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
-              "uuid": "0c5adc15-4aa5-4589-99e7-d6766d9e9297"
+              "uuid": "bd66246e-e960-42ba-ac00-5f828430e47a"
             },
             {
               "@type": "WorkflowStep",
@@ -768,8 +785,9 @@
               "description": null,
               "arguments": {
                 "route": "48f6f4ef-c668-4889-b79b-236420b6676e",
+                "title": "Cyble Vision: Fetch Alerts",
                 "resources": [
-                  "indicators"
+                  "alerts"
                 ],
                 "__triggerLimit": true,
                 "inputVariables": [],
@@ -789,7 +807,7 @@
                   }
                 },
                 "executeButtonText": "Execute",
-                "noRecordExecution": false,
+                "noRecordExecution": true,
                 "showToasterMessage": {
                   "visible": false,
                   "messageVisible": true
@@ -798,8 +816,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "64b258b4-f6c3-49e5-8d9d-71837525b7aa"
@@ -808,24 +826,27 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Start -> Get IOC Reputation",
-              "targetStep": "/api/3/workflow_steps/0c5adc15-4aa5-4589-99e7-d6766d9e9297",
+              "name": "Start -> Fetch Alerts",
+              "targetStep": "/api/3/workflow_steps/bd66246e-e960-42ba-ac00-5f828430e47a",
               "sourceStep": "/api/3/workflow_steps/64b258b4-f6c3-49e5-8d9d-71837525b7aa",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "c89271ce-f776-4c6d-966e-887958c7f794"
+              "uuid": "1481b494-3d2e-4d83-be32-5928c23221ce"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "7a84c8d2-1bd8-4881-8a51-8a71f5848202",
-          "id": 3204,
+          "id": 2119,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         },
         {
           "@type": "Workflow",
@@ -834,7 +855,7 @@
           "aliasName": null,
           "tag": null,
           "description": "Fetch and Create Indicators from Cyble Vision",
-          "isActive": true,
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
@@ -930,10 +951,10 @@
                   "ioc": "",
                   "begin": "{{vars.last_pull_time}}",
                   "limit": 10,
-                  "order": "asc",
-                  "sortBy": "first_seen"
+                  "order": "Ascending",
+                  "sortBy": "First Seen"
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "fetch_indicators",
                 "operationTitle": "Fetch Indicators",
@@ -1184,7 +1205,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "a8032009-d4c8-4350-ad97-cb110d97ea28",
-          "id": 3200,
+          "id": 2120,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1203,27 +1224,27 @@
           "name": "Fetch Companies",
           "aliasName": null,
           "tag": null,
-          "description": "Fetch Companiesfrom Cyble Vision CTI",
-          "isActive": true,
+          "description": "Retrieves a list of all users for an company from Cyble Vision.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727526943,
+          "lastModifyDate": 1738294164,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/dd65a322-a99e-4ab8-9f50-cd2564aeffba",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Get IOC Reputation",
+              "name": "Fetch Companies",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
                 "config": "b367839a-02a3-4ed1-9646-bd23ccc49bcf",
                 "params": [],
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "fetch_companies",
                 "operationTitle": "Fetch Companies",
@@ -1231,8 +1252,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
               "uuid": "e6145527-960b-4cb0-b53b-f7f2ac060f8f"
@@ -1243,8 +1264,9 @@
               "description": null,
               "arguments": {
                 "route": "ffd17425-e906-481f-ac1d-cdf9c33da268",
+                "title": "Cyble Vision: Fetch Companies",
                 "resources": [
-                  "indicators"
+                  "alerts"
                 ],
                 "__triggerLimit": true,
                 "inputVariables": [],
@@ -1264,7 +1286,7 @@
                   }
                 },
                 "executeButtonText": "Execute",
-                "noRecordExecution": false,
+                "noRecordExecution": true,
                 "showToasterMessage": {
                   "visible": false,
                   "messageVisible": true
@@ -1273,8 +1295,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "dd65a322-a99e-4ab8-9f50-cd2564aeffba"
@@ -1295,43 +1317,46 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "c8ccf5a5-50ff-4be8-9543-e7d011c07ba1",
-          "id": 3206,
+          "id": 2121,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         },
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Fetch IP details",
+          "name": "Fetch IP Details",
           "aliasName": null,
           "tag": null,
-          "description": "Get Fetch IP details from Cyble Vision CTI",
-          "isActive": true,
+          "description": "Retrieve detailed information about an IP address from Cyble Vision server.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727527174,
+          "lastModifyDate": 1738255432,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/59f65b14-1ba5-4481-9722-873fe6732431",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Fetch IP details",
+              "name": "Fetch IP Details",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
                 "config": "b367839a-02a3-4ed1-9646-bd23ccc49bcf",
                 "params": {
                   "addressIP": "0.0.0.0",
-                  "companyId": "company ID"
+                  "companyId": "1"
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "fetch_ip_details",
                 "operationTitle": "Fetch IP Details",
@@ -1339,8 +1364,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
               "uuid": "5f6c79a0-71c7-4531-9d97-5462c57f0668"
@@ -1351,8 +1376,9 @@
               "description": null,
               "arguments": {
                 "route": "0607f01d-8b66-4bf8-a19f-b9e4cb1cfd62",
+                "title": "Cyble Vision: Fetch IP Details",
                 "resources": [
-                  "indicators"
+                  "alerts"
                 ],
                 "__triggerLimit": true,
                 "inputVariables": [],
@@ -1372,7 +1398,7 @@
                   }
                 },
                 "executeButtonText": "Execute",
-                "noRecordExecution": false,
+                "noRecordExecution": true,
                 "showToasterMessage": {
                   "visible": false,
                   "messageVisible": true
@@ -1381,8 +1407,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "59f65b14-1ba5-4481-9722-873fe6732431"
@@ -1403,34 +1429,37 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "dd5fbf73-4df4-4e5f-88e1-fbfb4abe4387",
-          "id": 3209,
+          "id": 2122,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         },
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "List Of Advisories",
+          "name": "List Advisories",
           "aliasName": null,
           "tag": null,
-          "description": "Get the list of advisories from Cyble Vision CTI",
-          "isActive": true,
+          "description": "Retrieves a list of advisories from Cyble Vision based on the input parameters you have specified.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727527039,
+          "lastModifyDate": 1738255353,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/dd7a7d17-4f94-46b2-9309-6907b6c78120",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Get IOC Reputation",
+              "name": "List Advisories",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
@@ -1440,13 +1469,13 @@
                   "from": "",
                   "page": 1,
                   "limit": 10,
-                  "order": "asc",
+                  "order": "Ascending",
                   "sortBy": "publish_date",
                   "countries": "",
                   "customTags": "",
                   "vulnerabilities": ""
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "list_advisories",
                 "operationTitle": "List Advisories",
@@ -1454,8 +1483,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
               "uuid": "dc78571c-7fd7-4f8f-b122-59e343b5c510"
@@ -1466,8 +1495,9 @@
               "description": null,
               "arguments": {
                 "route": "7bc8bacc-735a-4445-9dba-72bdf2a1e6bd",
+                "title": "Cyble Vision: List Advisories",
                 "resources": [
-                  "indicators"
+                  "alerts"
                 ],
                 "__triggerLimit": true,
                 "inputVariables": [],
@@ -1487,7 +1517,7 @@
                   }
                 },
                 "executeButtonText": "Execute",
-                "noRecordExecution": false,
+                "noRecordExecution": true,
                 "showToasterMessage": {
                   "visible": false,
                   "messageVisible": true
@@ -1496,8 +1526,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "dd7a7d17-4f94-46b2-9309-6907b6c78120"
@@ -1518,27 +1548,30 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "e9887ee7-24ae-4ebc-a665-cf693868d5b9",
-          "id": 3207,
+          "id": 2123,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         },
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Add Comment to alert",
+          "name": "Add Comment to Alert",
           "aliasName": null,
           "tag": null,
-          "description": "Add Comment to alert from Cyble Vision CTI",
-          "isActive": true,
+          "description": "Add a comment to a specific alert in the Cyble Vision server.",
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1727526326,
+          "lastModifyDate": 1738255273,
           "collection": "/api/3/workflow_collections/1bb7c74a-ef5d-4e8d-9d4f-4f298153fd64",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/e91ce4f7-1fd6-4e9e-b9e0-f1f28f0b0764",
@@ -1551,10 +1584,10 @@
                 "name": "Cyble Vision",
                 "config": "b367839a-02a3-4ed1-9646-bd23ccc49bcf",
                 "params": {
-                  "alertID": "id",
+                  "alertID": "1",
                   "comment": ""
                 },
-                "version": "1.0.0",
+                "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "add_comment_to_alert",
                 "operationTitle": "Add Comment to Alert",
@@ -1562,8 +1595,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "177",
-              "left": "471",
+              "top": "165",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
               "uuid": "a92f4078-86ba-4b4f-9acf-12a5853b5e99"
@@ -1574,8 +1607,9 @@
               "description": null,
               "arguments": {
                 "route": "e5397fff-fdff-4560-ada7-276e439ff70f",
+                "title": "Cyble Vision: Add Comment to Alert",
                 "resources": [
-                  "indicators"
+                  "alerts"
                 ],
                 "__triggerLimit": true,
                 "inputVariables": [],
@@ -1595,7 +1629,7 @@
                   }
                 },
                 "executeButtonText": "Execute",
-                "noRecordExecution": false,
+                "noRecordExecution": true,
                 "showToasterMessage": {
                   "visible": false,
                   "messageVisible": true
@@ -1604,8 +1638,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "40",
-              "left": "40",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "e91ce4f7-1fd6-4e9e-b9e0-f1f28f0b0764"
@@ -1626,12 +1660,15 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "f459feb6-ce03-4e86-ab28-20e8410d34c9",
-          "id": 3205,
+          "id": 2124,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
           "importedBy": [],
-          "recordTags": []
+          "recordTags": [
+            "Cyble",
+            "cyble-vision"
+          ]
         }
       ]
     }
@@ -1644,6 +1681,7 @@
     }
   ],
   "exported_tags": [
+    "Cyble",
     "cyble-vision",
     "Cyble Vision",
     "dataingestion",

@@ -1,16 +1,12 @@
-"""
-Copyright start
-MIT License
-Copyright (c) 2024 Fortinet Inc
-Copyright end
-"""
 
 import requests
+import json
 from datetime import datetime
 from connectors.core.connector import get_logger, ConnectorError
+from  .alertdata import Alertdata
+
 
 logger = get_logger('cyble-vision')
-
 
 class CybleVision(object):
     def __init__(self, config):
@@ -37,12 +33,29 @@ class CybleVision(object):
 
     def make_request(self, endpoint, headers=None, params=None, data=None, method='GET'):
         try:
-            headers = {'X-API-KEY': self.token}
+            token = {'Authorization': "Bearer "+ self.token}
+            if headers is None:
+                headers = {}
+            headers.update(token)
             url = self.base_url + endpoint
-            response = requests.request(method, url, data=data, headers=headers, verify=self.verify_ssl, params=params)
-
+            response = requests.request(method, url, json=data, headers=headers, verify=self.verify_ssl, params=params)
             if response.status_code == 200 or response.status_code == 206:
-                return response.json()
+                try:
+                        response_data = response.json()
+                        if isinstance(response_data, str):
+                            response_data = json.loads(response_data)
+                        if 'data' in response_data:
+                            if isinstance(response_data['data'], str):
+                                response_data['data'] = json.loads(response_data['data'])
+                            elif isinstance(response_data['data'], list):
+                                for i in range(len(response_data['data'])):
+                                    if isinstance(response_data['data'][i], str):
+                                        response_data['data'][i] = json.loads(response_data['data'][i])
+
+                        return response_data  # Return the parsed response
+                except json.JSONDecodeError as e:
+                        print(f"Error decoding JSON: {e}")
+                        return None
             if self.error_msg[response.status_code]:
                 logger.error('{}'.format(response.content))
                 raise ConnectorError('{}'.format(self.error_msg[response.status_code]))
@@ -78,39 +91,81 @@ def fetch_indicators(config, params):
     obj = CybleVision(config)
     params = obj.build_payload(params)
     if params.get('start_date'):
-        params['start_date'] = handle_datetime(params.get('start_date'))
+        params['start_date'] = handle_datetime(params.get('start1_date'))
     if params.get('end_date'):
         params['end_date'] = handle_datetime(params.get('end_date'))
-    response = obj.make_request(endpoint='/api/iocs', params=params)
+    response = obj.make_request(endpoint='/engine/api/v2/y/iocs', params=params)
     return response
-
 
 def fetch_alerts(config, params):
     obj = CybleVision(config)
-    if params.get('start_date'):
-        params['start_date'] = handle_datetime(params.get('start_date'))
-    if params.get('end_date'):
-        params['end_date'] = handle_datetime(params.get('end_date'))
-    params = obj.build_payload(params)
-    response = obj.make_request(endpoint='/api/v2/events/all', params=params)
+    alertData = Alertdata()
+    alertData.update_dictionary(params)
+    data=alertData.prepare_post_data()
+    headers={"accept":"application/json", "Content-Type":"application/json"}
+    response = obj.make_request(endpoint="/apollo/api/v1/y/alerts", headers=headers, data=data, method='POST')
     return response
 
 
-def fetch_event_detail(config, params):
+def add_comment_to_alert(config, params):
     obj = CybleVision(config)
-    event_type = params.get("event_type")
-    event_id = params.get("event_id")
-    params.pop('event_type')
-    params.pop('event_id')
+    endpoint = "/apollo/api/v1/y/alerts/{}/comments".format(params['alertID'])
+    data = {"content" : params['comment']}
+    response = obj.make_request(endpoint=endpoint, data=data, method='POST')
+    return response
+
+
+
+def list_advisories(config, params):
+    obj = CybleVision(config)
+    date1_obj=datetime.strptime(params['from'], "%Y-%m-%dT%H:%M:%S.%fZ")
+    date_from=date1_obj.strftime("%Y-%m-%d")
+    date2_obj=datetime.strptime(params['to'], "%Y-%m-%dT%H:%M:%S.%fZ")
+    date_to=date2_obj.strftime("%Y-%m-%d")
+    dateRange=date_from + "," + date_to
     params = obj.build_payload(params)
-    response = obj.make_request(endpoint='/api/v2/events/{0}/{1}'.format(event_type, event_id), params=params)
+    params.update({"dateRange":dateRange})
+    del params['to']
+    del params['from']
+    response = obj.make_request(endpoint="/engine/api/v1/y/advisory", params=params)
+    return response
+
+
+
+def get_advisory_details(config, params):
+    obj = CybleVision(config)
+    endpoint = "/engine/api/v1/y/advisory/{}".format(params['advisoryID'])
+    headers={"accept":"application/pdf"}
+    response = obj.make_request(endpoint=endpoint,headers=headers)
+    return response
+
+
+def fetch_companies(config, params):
+    obj = CybleVision(config)
+    response = obj.make_request(endpoint="/apollo/api/v1/y/companies")
+    return response
+    
+
+
+def fetch_ip_details(config, params):
+    obj = CybleVision(config)
+    endpoint="/engine/api/v1/y/asm/details/{companyId}/ip/{ip}".format(companyId=params['companyId'], ip=params['addressIP'])
+    response = obj.make_request(endpoint=endpoint)
+    return response
+
+
+def fetch_cve_details(config, params):
+    obj = CybleVision(config)
+    endpoint="/engine/api/v1/y/vulnerability/cve/{cve}".format(cve=params['cve'])
+    response = obj.make_request(endpoint=endpoint)
     return response
 
 
 def check_health_ext(config):
     try:
         obj = CybleVision(config)
-        server_response = obj.make_request(endpoint='/api/v2/events/types')
+        params={"limit":"1"}
+        server_response = obj.make_request(endpoint='/engine/api/v2/y/iocs',params=params)
         if server_response:
             return True
     except Exception as err:
@@ -121,5 +176,10 @@ def check_health_ext(config):
 operations = {
     'fetch_indicators': fetch_indicators,
     'fetch_alerts': fetch_alerts,
-    'fetch_event_detail': fetch_event_detail
+    'add_comment_to_alert': add_comment_to_alert,
+    'list_advisories': list_advisories,
+    'get_advisory_details': get_advisory_details,
+    'fetch_companies': fetch_companies,
+    'fetch_ip_details': fetch_ip_details,
+    'fetch_cve_details': fetch_cve_details,
 }

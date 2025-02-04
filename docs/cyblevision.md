@@ -24,7 +24,7 @@ Following enhancements have been made to the Cyble Vision Connector in version 2
 <ul>
 <li>List Advisories</li>
 <li>Get Advisory Details</li>
-<li>Fetch Companies</li>
+<li>Fetch All Users for a Company</li>
 <li>Fetch IP Details</li>
 <li>Add Comment to Alert</li>
 <li>Fetch CVE Details</li>
@@ -59,7 +59,7 @@ The following automated operations can be included in playbooks and you can also
 <tr><td>Fetch Alerts</td><td>Retrieves a list of alerts from Cyble Vision based on the company ID, and other parameters you have specified.</td><td>fetch_alerts <br/>Investigation</td></tr>
 <tr><td>List Advisories</td><td>Retrieves a list of advisories from Cyble Vision based on the input parameters you have specified.</td><td>list_advisories <br/>Investigation</td></tr>
 <tr><td>Get Advisory Details</td><td>Retrieves specific advisory details from Cyble Vision based on the advisory ID you have specified.</td><td>get_advisory_details <br/>Investigation</td></tr>
-<tr><td>Fetch Companies</td><td>Retrieves a list of all users for an company from Cyble Vision.</td><td>fetch_companies <br/>Investigation</td></tr>
+<tr><td>Fetch All Users for a Company</td><td>Retrieves a list of all users for an company from Cyble Vision.</td><td>fetch_companies <br/>Investigation</td></tr>
 <tr><td>Fetch IP Details</td><td>Retrieve detailed information about an IP address from Cyble Vision server.</td><td>fetch_ip_details <br/>Investigation</td></tr>
 <tr><td>Add Comment to Alert</td><td>Add a comment to a specific alert in the Cyble Vision server.</td><td>add_comment_to_alert <br/>Utilities</td></tr>
 <tr><td>Fetch CVE Details</td><td>Retrieve the specific common vulnerability and exposure (CVE) details from Cyble Vision.</td><td>fetch_cve_details <br/>Investigation</td></tr>
@@ -68,7 +68,7 @@ The following automated operations can be included in playbooks and you can also
 ### operation: Fetch Indicators
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>IOC</td><td>Specify a value for the IOC to query in Cyble Vision.
-</td></tr><tr><td>Type</td><td>Select the type based on which you want to filter the indicators retrieved from Cyble Vision. You can choose from the following options: Domain, FileHash-MD5, FileHash-SHA1, FileHash-SHA256, IPv4, IPv6, URL, or Email.
+</td></tr><tr><td>Indicator Type</td><td>Select the indicator type based on which you want to filter the indicators retrieved from Cyble Vision. You can choose from the following options: Domain, FileHash-MD5, FileHash-SHA1, FileHash-SHA256, IPv4, IPv6, URL, or Email.
 </td></tr><tr><td>Start Time</td><td>Specify the starting DateTime from when you want to retrieve indicators from Cyble Vision.
 </td></tr><tr><td>End Time</td><td>Specify the ending DateTime till when you want to retrieve indicators from Cyble Vision.
 </td></tr><tr><td>Order By</td><td>Select an option in which to order the indicators retrieved. You can choose from Ascending or Descending. By default, this option is set as Ascending.
@@ -113,12 +113,12 @@ The output contains the following populated JSON schema:
 ### operation: Fetch Alerts
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Company ID</td><td>Specify a ID (UUID) of the company to filter the list of alerts retrieved from Cyble Vision.
-</td></tr><tr><td>Sort By</td><td>Select an option in which to sort the alerts retrieved. You can choose from Ascending or Descending. By default, this option is set as Descending.
+</td></tr><tr><td>Order By</td><td>Select an option in which to order the alerts retrieved. You can choose from Ascending or Descending. By default, this option is set as Descending.
 </td></tr><tr><td>Start Time</td><td>Specify the starting DateTime from when you want to retrieve alerts from Cyble Vision.
 </td></tr><tr><td>End Time</td><td>Specify the ending DateTime till when you want to retrieve alerts from Cyble Vision.
-</td></tr><tr><td>Severity</td><td>Specify a comma-separated list of severity using which you want to retrieve alerts from Cyble Vision. You can specify the following values: LOW, MEDIUM, or HIGH.
-</td></tr><tr><td>Status</td><td>Specify a comma-separated list of status using which you want to retrieve alerts from Cyble Vision. You can specify the following values: VIEWED, UNREVIEWED, CONFIRMED_INCIDENT, UNDER_REVIEW, or INFORMATIONAL.
-</td></tr><tr><td>Service</td><td>Specify the service using which you want to retrieve alerts from Cyble Vision. You can specify the following values: Data Breaches, Ransomware Forum Mentions, Compromised Endpoints, etc. By default, this option is set as Data Breaches.
+</td></tr><tr><td>Severity</td><td>Select multiple severity using which you want to retrieve alerts from Cyble Vision. You can specify the following values: LOW, MEDIUM, or HIGH.
+</td></tr><tr><td>Status</td><td>Select multiple status using which you want to retrieve alerts from Cyble Vision. You can specify the following values: VIEWED, UNREVIEWED, CONFIRMED_INCIDENT, UNDER_REVIEW, or INFORMATIONAL.
+</td></tr><tr><td>Service</td><td>Select the service using which you want to retrieve alerts from Cyble Vision. You can specify the following values: Data Breaches, Ransomware Forum Mentions, Compromised Endpoints, etc. By default, this option is set as Data Breaches.
 </td></tr><tr><td>Limit</td><td>Specify the maximum number of results this operation should return, per page, in the response. By default, this value is set to 50.
 </td></tr></tbody></table>
 
@@ -233,7 +233,7 @@ The output contains the following populated JSON schema:
 
  The output contains a non-dictionary value.
 
-### operation: Fetch Companies
+### operation: Fetch All Users for a Company
 #### Input parameters
 None.
 
@@ -412,7 +412,7 @@ The `Sample - Cyble Vision - 2.0.0` playbook collection comes bundled with the C
 - Cyble Vision > Ingest
 - Fetch Alerts
 - Fetch CVE Details
-- Fetch Companies
+- Fetch All Users for a Company
 - Fetch IP Details
 - Fetch Indicators
 - File Hash / Domain / IP / URL > Cyble Vision Threat Intelligence > Enrichment

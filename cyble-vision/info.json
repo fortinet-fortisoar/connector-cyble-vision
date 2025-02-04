@@ -109,14 +109,14 @@
           "description": "Specify a value for the IOC to query in Cyble Vision."
         },
         {
-          "title": "Type",
+          "title": "Indicator Type",
           "name": "type",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "select",
-          "tooltip": "Select the type based on which you want to filter the indicators retrieved from Cyble Vision. You can choose from the following options: Domain, FileHash-MD5, FileHash-SHA1, FileHash-SHA256, IPv4, IPv6, URL, or Email.",
-          "description": "Select the type based on which you want to filter the indicators retrieved from Cyble Vision. You can choose from the following options: Domain, FileHash-MD5, FileHash-SHA1, FileHash-SHA256, IPv4, IPv6, URL, or Email.",
+          "tooltip": "Select the indicator type based on which you want to filter the indicators retrieved from Cyble Vision. You can choose from the following options: Domain, FileHash-MD5, FileHash-SHA1, FileHash-SHA256, IPv4, IPv6, URL, or Email.",
+          "description": "Select the indicator type based on which you want to filter the indicators retrieved from Cyble Vision. You can choose from the following options: Domain, FileHash-MD5, FileHash-SHA1, FileHash-SHA256, IPv4, IPv6, URL, or Email.",
           "options": [
             "Domain",
             "FileHash-MD5",
@@ -263,21 +263,6 @@
           "tooltip": "Specify a ID (UUID) of the company to filter the list of alerts retrieved from Cyble Vision."
         },
         {
-          "title": "Sort By",
-          "type": "select",
-          "name": "sortBy",
-          "required": false,
-          "visible": true,
-          "editable": true,
-          "value": "Descending",
-          "descriptions": "Select an option in which to sort the alerts retrieved. You can choose from Ascending or Descending. By default, this option is set as Descending.",
-          "tooltip": "Select an option in which to sort the alerts retrieved. You can choose from Ascending or Descending. By default, this option is set as Descending.",
-          "options": [
-            "Ascending",
-            "Descending"
-          ]
-        },
-        {
           "title": "Start Time",
           "type": "datetime",
           "name": "begin",
@@ -300,7 +285,7 @@
         {
           "title": "Severity",
           "type": "multiselect",
-          "description": "Specify a comma-separated list of severity using which you want to retrieve alerts from Cyble Vision. You can specify the following values: LOW, MEDIUM, or HIGH.",
+          "description": "Select multiple severity using which you want to retrieve alerts from Cyble Vision. You can specify the following values: LOW, MEDIUM, or HIGH.",
           "name": "severity",
           "required": false,
           "visible": true,
@@ -310,12 +295,12 @@
             "MEDIUM",
             "HIGH"
           ],
-          "tooltip": "Specify a comma-separated list of severity using which you want to retrieve alerts from Cyble Vision. You can specify the following values: LOW, MEDIUM, or HIGH."
+          "tooltip": "Specify multiple severity using which you want to retrieve alerts from Cyble Vision. You can specify the following values: LOW, MEDIUM, or HIGH."
         },
         {
           "title": "Status",
           "type": "multiselect",
-          "description": "Specify a comma-separated list of status using which you want to retrieve alerts from Cyble Vision. You can specify the following values: VIEWED, UNREVIEWED, CONFIRMED_INCIDENT, UNDER_REVIEW, or INFORMATIONAL.",
+          "description": "Select multiple status using which you want to retrieve alerts from Cyble Vision. You can specify the following values: VIEWED, UNREVIEWED, CONFIRMED_INCIDENT, UNDER_REVIEW, or INFORMATIONAL.",
           "name": "status",
           "required": false,
           "visible": true,
@@ -327,12 +312,12 @@
             "UNDER_REVIEW",
             "INFORMATIONAL"
           ],
-          "tooltip": "Specify a comma-separated list of status using which you want to retrieve alerts from Cyble Vision. You can specify the following values: VIEWED, UNREVIEWED, CONFIRMED_INCIDENT, UNDER_REVIEW, or INFORMATIONAL."
+          "tooltip": "Specify multiple status using which you want to retrieve alerts from Cyble Vision. You can specify the following values: VIEWED, UNREVIEWED, CONFIRMED_INCIDENT, UNDER_REVIEW, or INFORMATIONAL."
         },
         {
           "title": "Service",
           "type": "select",
-          "description": "Specify the service using which you want to retrieve alerts from Cyble Vision. You can specify the following values: Data Breaches, Ransomware Forum Mentions, Compromised Endpoints, etc. By default, this option is set as Data Breaches.",
+          "description": "Select the service using which you want to retrieve alerts from Cyble Vision. You can specify the following values: Data Breaches, Ransomware Forum Mentions, Compromised Endpoints, etc. By default, this option is set as Data Breaches.",
           "name": "service",
           "required": false,
           "visible": true,
@@ -381,7 +366,22 @@
             "Cyble Research Labs",
             "News Flash"
           ],
-          "tooltip": "Specify the service using which you want to retrieve alerts from Cyble Vision. You can specify the following values: Data Breaches, Ransomware Forum Mentions, Compromised Endpoints, etc. By default, this option is set as Data Breaches."
+          "tooltip": "Select the service using which you want to retrieve alerts from Cyble Vision. You can specify the following values: Data Breaches, Ransomware Forum Mentions, Compromised Endpoints, etc. By default, this option is set as Data Breaches."
+        },
+        {
+          "title": "Order By",
+          "type": "select",
+          "name": "sortBy",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "value": "Descending",
+          "descriptions": "Select an option in which to order the alerts retrieved. You can choose from Ascending or Descending. By default, this option is set as Descending.",
+          "tooltip": "Select an option in which to order the alerts retrieved. You can choose from Ascending or Descending. By default, this option is set as Descending.",
+          "options": [
+            "Ascending",
+            "Descending"
+          ]
         },
         {
           "title": "Limit",
@@ -558,7 +558,7 @@
       "category": "investigation"
     },
     {
-      "title": "Fetch Companies",
+      "title": "Fetch All Users for a Company",
       "operation": "fetch_companies",
       "annotation": "fetch_companies",
       "description": "Retrieves a list of all users for an company from Cyble Vision.",
@@ -597,7 +597,7 @@
         {
           "title": "IP Address",
           "description": "Specify a IP address based on which you want to retrieve details from Cyble Vision.",
-          "type": "ipv4",
+          "type": "text",
           "name": "addressIP",
           "required": true,
           "visible": true,

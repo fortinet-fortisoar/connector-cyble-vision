@@ -8,7 +8,7 @@
 - Added the new following actions and playbooks:
    - List Advisories
    - Get Advisory Details
-   - Fetch Companies
+   - Fetch All Users for a Company
    - Fetch IP Details
    - Add Comment to Alert
    - Fetch CVE Details

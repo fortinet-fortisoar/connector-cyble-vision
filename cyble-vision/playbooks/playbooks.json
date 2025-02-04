@@ -1221,7 +1221,7 @@
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Fetch Companies",
+          "name": "Fetch All Users for a Company",
           "aliasName": null,
           "tag": null,
           "description": "Retrieves a list of all users for an company from Cyble Vision.",
@@ -1238,7 +1238,7 @@
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Fetch Companies",
+              "name": "Fetch All Users for a Company",
               "description": null,
               "arguments": {
                 "name": "Cyble Vision",
@@ -1247,7 +1247,7 @@
                 "version": "2.0.0",
                 "connector": "cyble-vision",
                 "operation": "fetch_companies",
-                "operationTitle": "Fetch Companies",
+                "operationTitle": "Fetch All Users for a Company",
                 "pickFromTenant": false,
                 "step_variables": []
               },
@@ -1264,7 +1264,7 @@
               "description": null,
               "arguments": {
                 "route": "ffd17425-e906-481f-ac1d-cdf9c33da268",
-                "title": "Cyble Vision: Fetch Companies",
+                "title": "Cyble Vision: Fetch All Users for a Company",
                 "resources": [
                   "alerts"
                 ],

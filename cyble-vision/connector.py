@@ -1,3 +1,9 @@
+"""
+Copyright start
+MIT License
+Copyright (c) 2025 Fortinet Inc
+Copyright end
+"""
 
 from .operations import operations, check_health_ext
 from connectors.core.connector import Connector, get_logger, ConnectorError
@@ -11,7 +17,7 @@ class CybleVision(Connector):
         try:
             logger.debug('execute [{}]'.format(operation))
             operation = operations.get(operation)
-            return operation(config, params)
+            return operation(config, params, **kwargs)
         except Exception as err:
             logger.exception(err)
             raise ConnectorError(err)
